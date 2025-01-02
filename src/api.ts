@@ -2,17 +2,25 @@ import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
 import { Stagehand } from '@browserbasehq/stagehand';
 import { z } from 'zod';
 import dotenv from 'dotenv';
-import fs from 'fs/promises';
+import { promises as fs } from 'fs';
 
 dotenv.config();
 
-const stagehand = new Stagehand({
-  env: 'BROWSERBASE',
-  enableCaching: true,
-  verbose: 1,
-});
-
 const COOKIE_FILE = 'cookies.json';
+const MAX_GENERATION_TIME = 180000; // 3 minutes
+
+// Initialize Stagehand with stored cookies
+async function initStagehand() {
+  const stagehand = new Stagehand({
+    env: "LOCAL",
+    enableCaching: true,
+    verbose: 1,
+  });
+
+  await stagehand.init();
+  await loadCookies(stagehand.page);
+  return stagehand;
+}
 
 const PromptSchema = z.object({
   prompt: z.string(),
@@ -67,11 +75,27 @@ async function checkAndLogin(page: any) {
         variables: { password: process.env.GITHUB_PASSWORD }
       });
       await page.act({ action: "click the sign in button" });
+
+      // Wait a moment for the login to process
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      // Verify login was successful by checking for login-related elements again
+      const postLoginActions = await page.observe() as ObserveAction[];
+      const stillNeedsLogin = postLoginActions.some(action => 
+        action.description.toLowerCase().includes('sign in') || 
+        action.description.toLowerCase().includes('login')
+      );
+
+      if (!stillNeedsLogin) {
+        // Only save cookies if login was successful
+        await saveCookies(page);
+        return true;
+      } else {
+        throw new Error('Login failed - still seeing login elements after attempt');
+      }
     }
 
-    // Save cookies after successful login
-    await saveCookies(page);
-    return true;
+    return false;
   }
   return false;
 }
@@ -85,47 +109,127 @@ async function captureScreenshot(page: any, name: string) {
   return base64Image;
 }
 
-async function extractAllFiles(page: any) {
-  // Get all file tabs
-  const actions = await page.observe() as ObserveAction[];
-  const fileTabs = actions.filter(action => 
-    action.description.toLowerCase().includes('tab') || 
-    action.description.toLowerCase().includes('file')
-  );
+async function waitForGeneration(page: any) {
+  const startTime = Date.now();
+  
+  while (Date.now() - startTime < MAX_GENERATION_TIME) {
+    const actions = await page.observe() as ObserveAction[];
+    
+    // Check for error states
+    const hasError = actions.some(action => 
+      action.description.toLowerCase().includes('error') ||
+      action.description.toLowerCase().includes('failed')
+    );
+    if (hasError) {
+      throw new Error('Generation failed');
+    }
 
-  const files: Record<string, string> = {};
-
-  // Extract code from each tab
-  for (const tab of fileTabs) {
-    // Click the tab
-    await page.act({ action: `click ${tab.description}` });
-
-    // Extract the code
-    const fileContent = await page.extract({
-      instruction: "extract the code from the current file",
-      schema: z.object({
-        filename: z.string(),
-        code: z.string()
-      })
+    // Check for completion indicators
+    const isComplete = actions.some(action => {
+      const desc = action.description.toLowerCase();
+      return (
+        desc.includes('copy code') ||
+        desc.includes('preview') ||
+        desc.includes('download') ||
+        desc.includes('save to project')
+      );
     });
 
-    files[fileContent.filename] = fileContent.code;
+    if (isComplete) {
+      return true;
+    }
+
+    // Check if still generating
+    const isGenerating = actions.some(action => {
+      const desc = action.description.toLowerCase();
+      return (
+        desc.includes('generating') ||
+        desc.includes('loading') ||
+        desc.includes('please wait')
+      );
+    });
+
+    if (!isGenerating) {
+      // Additional verification - try to extract code
+      try {
+        const result = await page.extract({
+          instruction: "check if there's any code visible in the editor",
+          schema: z.object({
+            hasCode: z.boolean()
+          })
+        });
+        if (result.hasCode) {
+          return true;
+        }
+      } catch (e) {
+        // If extraction fails, continue waiting
+      }
+    }
+
+    // Wait before next check
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+
+  throw new Error('Generation timed out');
+}
+
+async function extractCode(page: any) {
+  // First check if code tab exists
+  const actions = await page.observe() as ObserveAction[];
+  const hasCodeTab = actions.some(action => 
+    action.description.toLowerCase().includes('code') && 
+    (action.selector?.includes('@[17rem]/tabs:block') || 
+     action.selector?.includes('span') ||
+     action.description.toLowerCase().includes('tab'))
+  );
+
+  if (!hasCodeTab) {
+    throw new Error('No code tab found - generation may have failed');
+  }
+
+  // Click the code tab
+  await page.act({ action: "click the tab that says Code" });
+
+  // Wait a moment for code view to load
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  // Extract the code by evaluating the page content
+  const result = await page.evaluate(() => {
+    // Look for pre elements containing code
+    const codeBlocks = Array.from(document.querySelectorAll('pre'));
+    return codeBlocks.map(block => ({
+      filename: block.getAttribute('data-filename') || '',
+      code: block.textContent || ''
+    }));
+  });
+
+  // Format the result
+  const files: Record<string, string> = {};
+  for (const block of result) {
+    if (block.code.trim()) {
+      files[block.filename || 'code.tsx'] = block.code;
+    }
   }
 
   return files;
 }
 
 async function interactWithV0(prompt: string) {
-  await stagehand.init();
+  const stagehand = await initStagehand();
   const page = stagehand.page;
 
   try {
     // Navigate to v0.dev
     await page.goto('https://v0.dev');
 
-    // Try to restore cookies first
-    const cookiesLoaded = await loadCookies(page);
-    if (!cookiesLoaded) {
+    // Check if we need to login (cookies might be expired or invalid)
+    const actions = await page.observe() as ObserveAction[];
+    const needsLogin = actions.some(action => 
+      action.description.toLowerCase().includes('sign in') || 
+      action.description.toLowerCase().includes('login')
+    );
+
+    if (needsLogin) {
       await checkAndLogin(page);
     }
 
@@ -141,23 +245,21 @@ async function interactWithV0(prompt: string) {
       action: "click the Generate button" 
     });
 
-    // Wait for generation to complete (might be something else)
-    await page.waitForSelector('.completed-indicator', { timeout: 120000 });
+    // Wait for generation to complete using observe
+    await waitForGeneration(page);
 
     // Capture IDE screenshot
-    const ideScreenshot = await captureScreenshot(page, 'ide');
+    // const ideScreenshot = await captureScreenshot(page, 'ide');
 
-    // Extract all files
-    const files = await extractAllFiles(page);
+    // Extract code
+    const files = await extractCode(page);
 
-    // Switch to preview tab and capture screenshot
-    await page.act({ action: "click the Preview tab" });
-    const previewScreenshot = await captureScreenshot(page, 'preview');
+    // Save the latest cookies
+    await saveCookies(page);
 
     return {
       files,
-      ideScreenshot,
-      previewScreenshot
+      // ideScreenshot
     };
 
   } finally {

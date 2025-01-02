@@ -44,3 +44,11 @@ julius-api-server/cookies.json
 script.template
 
 /venv
+
+/tmp
+/downloads
+
+/cookies.json
+
+src/api.js
+src/server.js

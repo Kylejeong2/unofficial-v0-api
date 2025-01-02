@@ -1,25 +1,25 @@
 {
   "name": "v0-api",
   "version": "1.0.0",
-  "description": "API for interacting with v0.dev using Stagehand and Browserbase",
-  "main": "dist/api.js",
+  "description": "API for interacting with v0.dev using Stagehand",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/api.js",
-    "dev": "node --loader ts-node/esm server.ts"
+    "start": "node dist/src/server.js",
+    "dev": "tsx watch src/server.ts",
+    "tunnel": "ngrok http 5000",
+    "setup": "npm install && npx playwright install"
   },
   "dependencies": {
     "@browserbasehq/stagehand": "^1.8.0",
     "@fastify/cors": "^8.3.0",
-    "browserbase": "^3.0.3",
     "dotenv": "^16.0.3",
     "fastify": "^4.17.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.7.0",
     "typescript": "^5.0.4"
   }
 }

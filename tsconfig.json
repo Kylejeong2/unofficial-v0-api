@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "lib": ["es2022", "dom"],
     "outDir": "./dist",
     "rootDir": "./",
@@ -9,8 +10,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "allowJs": true,
+    "resolveJsonModule": true
   },
-  "include": ["*.ts", "src/api.ts", "src/server.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 } 

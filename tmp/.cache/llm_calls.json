@@ -1,0 +1,2066 @@
+{
+  "e31254e2c41b81ffb7e13ff23ca8921aeb7723b75ae8129434213aeb45f0699a": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "New Chat - Link to start a new chat session."
+        },
+        {
+          "elementId": 1,
+          "description": "Sign In - Link to sign into the application."
+        },
+        {
+          "elementId": 3,
+          "description": "Sign Up - Link to sign up for a new account."
+        },
+        {
+          "elementId": 8,
+          "description": "Attach Files - Button to attach files to a chat or message."
+        },
+        {
+          "elementId": 9,
+          "description": "Project - Button to select a project."
+        },
+        {
+          "elementId": 11,
+          "description": "Generate an onboarding form - Button to create an onboarding form."
+        },
+        {
+          "elementId": 14,
+          "description": "Structure LLM output - Button to structure LLM output."
+        },
+        {
+          "elementId": 17,
+          "description": "Flatten nested arrays - Button to flatten nested arrays."
+        },
+        {
+          "elementId": 21,
+          "description": "Request Template - Button to request a template."
+        }
+      ]
+    },
+    "timestamp": 1735848404952,
+    "requestId": "ammu1yc2ksw"
+  },
+  "698faa8eadfb86f3c0be4779790869824a95afb0e7748fb7d3682bc3c989c1a1": {
+    "data": {
+      "id": "chatcmpl-AlLkrrgTCqZ2qXpfHVYZfLkz0ln97",
+      "object": "chat.completion",
+      "created": 1735848405,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_PqRY5KvrdDgLLy4S4RClSBn2",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":1,\"args\":[],\"step\":\"Clicked on the 'Sign In' link to initiate the sign-in process.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 3172,
+        "completion_tokens": 43,
+        "total_tokens": 3215,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848406297,
+    "requestId": "7dji3g1pwr5"
+  },
+  "d77fcfceb878e265a9d23fa28d57768ba2df7567f300aacac1befca13517ab9a": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848414431,
+    "requestId": "7dji3g1pwr5"
+  },
+  "957e9d1b43435dc32349f779febb02427b5f963484f4cfbdff8d889d53ed277e": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button for an unspecified action (possibly hidden)."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 12,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 14,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 16,
+          "description": "Label to attach files."
+        },
+        {
+          "elementId": 17,
+          "description": "Label to import from Figma."
+        },
+        {
+          "elementId": 18,
+          "description": "Button to select a project."
+        },
+        {
+          "elementId": 20,
+          "description": "Button to generate a SaaS pricing calculator."
+        },
+        {
+          "elementId": 23,
+          "description": "Button to explain cron jobs."
+        },
+        {
+          "elementId": 26,
+          "description": "Button to implement a min heap."
+        },
+        {
+          "elementId": 30,
+          "description": "Button to request a template."
+        }
+      ]
+    },
+    "timestamp": 1735848470717,
+    "requestId": "qp25ylv0gcg"
+  },
+  "cf8f8530ba01c8f8d9ac8d3921b3883ee8b7e161e92e3107c11fb613c555a90e": {
+    "data": {
+      "id": "chatcmpl-AlLlvH3EEuxKlC848ld4vKQwXAVAZ",
+      "object": "chat.completion",
+      "created": 1735848471,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_8lZFvidC0lG6FPCMWFx2ePok",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"fill\",\"element\":15,\"args\":[\"<|PROMPT|>\"],\"step\":\"Filled the prompt textarea with the provided prompt.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5047,
+        "completion_tokens": 44,
+        "total_tokens": 5091,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848472387,
+    "requestId": "7ju3ufmv7pp"
+  },
+  "e08b045ca5cf3acac35eec913a1da7fe8a4e9e9903cd7760f240d03ea291c11b": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848477401,
+    "requestId": "7ju3ufmv7pp"
+  },
+  "6cf3f464d2847ad582685fac91faecc43ad98884f096bf72c0835aee1a4405ba": {
+    "data": {
+      "id": "chatcmpl-AlLm1jblLZtIUvZcTlKgyKWxdkp7p",
+      "object": "chat.completion",
+      "created": 1735848477,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_NOq6tRWpMwY8Q1im03RxpeRX",
+                "type": "function",
+                "function": {
+                  "name": "skipSection",
+                  "arguments": "{\"reason\":\"There is no element labeled 'Generate' or similar in this section.\"}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5279,
+        "completion_tokens": 28,
+        "total_tokens": 5307,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848478947,
+    "requestId": "bgr65nka9t5"
+  },
+  "63dfd1b492a53fff814f593a8d255bdd5bb943d99f61fff77b3d92cd1dae1fab": {
+    "data": {
+      "id": "chatcmpl-AlLm3WG4pVVBNKhQpTbhh7iALtJbt",
+      "object": "chat.completion",
+      "created": 1735848479,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_D0o9NuxUs2vraoDbJKlbO3O4",
+                "type": "function",
+                "function": {
+                  "name": "skipSection",
+                  "arguments": "{\"reason\":\"There is no 'Generate' button in the current DOM elements to click.\"}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5288,
+        "completion_tokens": 29,
+        "total_tokens": 5317,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848481309,
+    "requestId": "bgr65nka9t5"
+  },
+  "b152fadeb9b94d55d778962ecad90f9d55aa8047da1a374668df5798c674d5fd": {
+    "data": {
+      "id": "chatcmpl-AlLm9KKCzz6rpWDVXmKDplTG5Yxdd",
+      "object": "chat.completion",
+      "created": 1735848485,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_2caJywl4ScIDaJILgbBDdCX6",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":21,\"args\":[],\"step\":\"Clicked the 'Generate' button labeled 'Generate a SaaS pricing calculator'.\",\"why\":\"This action directly accomplishes the goal of clicking the 'Generate' button.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 6469,
+        "completion_tokens": 61,
+        "total_tokens": 6530,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848487718,
+    "requestId": "bgr65nka9t5"
+  },
+  "346639c19ca9c559acfbd3390fbc544395b12fe9e69dd50dd0407a04c88abbae": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848499337,
+    "requestId": "bgr65nka9t5"
+  },
+  "5703b976d1ae454005e9db4112b2efe043635cc55637863255e65cf3013f2110": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "A link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "A link to start a new chat, possibly in a different section."
+        },
+        {
+          "elementId": 2,
+          "description": "A link to access the chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "A link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "A button to provide feedback."
+        },
+        {
+          "elementId": 6,
+          "description": "A button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "A button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "A button to access the SaaS Pricing Calculator."
+        },
+        {
+          "elementId": 53,
+          "description": "A button to access more options."
+        },
+        {
+          "elementId": 62,
+          "description": "A button to upgrade the plan."
+        },
+        {
+          "elementId": 64,
+          "description": "A button to close the current view."
+        },
+        {
+          "elementId": 66,
+          "description": "A button to stop the current generation process."
+        }
+      ]
+    },
+    "timestamp": 1735848503447,
+    "requestId": "wxozu1w5bie"
+  },
+  "68dc464d2e7adb48609a96a59e9954ab52d4c40a699b0c7cb3061dda5a045bc0": {
+    "data": {
+      "hasCode": true
+    },
+    "timestamp": 1735848505708,
+    "requestId": "3cdb637c0h9"
+  },
+  "c67f9cab3ca458552b125563a55688a3fce1d6ac7a5a4feef9784d000b66630d": {
+    "data": {
+      "hasCode": true
+    },
+    "timestamp": 1735848507467,
+    "requestId": "3cdb637c0h9"
+  },
+  "84259570c3101eaa039bd49620bf267d966457e71c77a31d029e4bcac36fe94c": {
+    "data": {
+      "progress": "The extraction response indicates that there is code visible in the editor.",
+      "completed": true
+    },
+    "timestamp": 1735851735271,
+    "requestId": "uk27bgkq5s"
+  },
+  "d42211749f854a9f972c991047a1c0b67be8052c51566625029da2a0b5cdeed4": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to access chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for a hidden action."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button to access the SaaS Pricing Calculator."
+        },
+        {
+          "elementId": 53,
+          "description": "Button to access more options."
+        },
+        {
+          "elementId": 69,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 71,
+          "description": "Button to close the current view."
+        },
+        {
+          "elementId": 73,
+          "description": "Button to stop the current generation process."
+        },
+        {
+          "elementId": 77,
+          "description": "Button to close the current view."
+        },
+        {
+          "elementId": 80,
+          "description": "Button to switch to the 'Code' tab."
+        },
+        {
+          "elementId": 83,
+          "description": "Button to switch to the 'Console' tab."
+        },
+        {
+          "elementId": 88,
+          "description": "Button to copy content."
+        },
+        {
+          "elementId": 89,
+          "description": "Button to download content."
+        }
+      ]
+    },
+    "timestamp": 1735848515001,
+    "requestId": "zruf1pk5htb"
+  },
+  "78b674e26ea1b8b11c888af53792c9e32eaf30853d3a2fa20f4e8cc773488305": {
+    "data": {
+      "id": "chatcmpl-AlLmhkDT3CNI8ZoegtYXwfUMNQNV4",
+      "object": "chat.completion",
+      "created": 1735848519,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_zi0QE0NBDlV2AVkV2N1IuIUW",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":6,\"args\":[],\"step\":\"Clicked the button with aria-label 'Profile Menu' to toggle the user profile menu.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5599,
+        "completion_tokens": 45,
+        "total_tokens": 5644,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848521493,
+    "requestId": "yyc9zvbkb"
+  },
+  "eb287e4b8a31c672677340c49e16894d0bc34d4f221fe2c1acbd6056bacd426e": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848536240,
+    "requestId": "yyc9zvbkb"
+  },
+  "7e3faba7018248b9771d2a8a976b83a51baab59e5f1f9dd7ed253de02023c8d8": {
+    "data": {
+      "filename": "Generated pricing-calculator.tsx",
+      "code": "This interactive pricing calculator provides a user-friendly way for potential customers to estimate their costs based on their specific requirements. The real-time updates as users adjust the inputs make it easy to see how different factors affect the final price."
+    },
+    "timestamp": 1735848541187,
+    "requestId": "9ts4qhhpdz"
+  },
+  "01e94fcb88b8d81333d686cf6a7fbb326886fd92b6ac82cbc6fd8b986504f8fc": {
+    "data": {
+      "filename": "Generated pricing-calculator.tsx",
+      "code": "This interactive pricing calculator provides a user-friendly way for potential customers to estimate their costs based on their specific requirements. The real-time updates as users adjust the inputs make it easy to see how different factors affect the final price."
+    },
+    "timestamp": 1735848543609,
+    "requestId": "9ts4qhhpdz"
+  },
+  "b76e13fac2dbbd52226fe1213371838f3d91663d5c793b785384da6d76c01af2": {
+    "data": {
+      "progress": "Filename extracted: 'Generated pricing-calculator.tsx'. Code extraction incomplete.",
+      "completed": false
+    },
+    "timestamp": 1735848544910,
+    "requestId": "9ts4qhhpdz"
+  },
+  "35853b4f5c387b300cda17246c5eb8f406611a661aadae290c9c0f46f410deeb": {
+    "data": {
+      "filename": "Generated pricing-calculator.tsx",
+      "code": ".copy-icon {\n            * {\n              transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95), d 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);\n            }\n          }\n          button:has(.copy-icon):hover, button:has(.copy-icon):focus-visible {\n            .left {\n              d: path(\"M 2.75 0.5 C 1.7835 0.5 1 1.2835 1 2.25 V 9.75 C 1 10.7165 1.7835 11.5 2.75 11.5 H 3.75 H 6.5 V 10 H 3.75 H 2.75 C 2.6119 10 2.5 9.8881 2.5 9.75 V 2.25 C 2.5 2.1119 2.6119 2 2.75 2 H 8.25 C 8.3881 2 8.5 2.1119 8.5 2.25 V 5 H 10 V 2.25 C 10 1.2835 9.2165 0.5 8.25 0.5 H 2.75 Z\");\n              transform: translate(-1px, -1px);\n            }\n            .right {\n              transform: translate(1px, 1px);\n            }\n          }"
+    },
+    "timestamp": 1735848554917
+  },
+  "41f856a7fcf3b7316e3887fecf8390e47fbb3dd373a3c8cce866f60ed70cebd3": {
+    "data": {
+      "filename": "Generated pricing-calculator.tsx",
+      "code": "This interactive pricing calculator provides a user-friendly way for potential customers to estimate their costs based on their specific requirements. The real-time updates as users adjust the inputs make it easy to see how different factors affect the final price..copy-icon {\n            * {\n              transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95), d 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);\n            }\n          }\n          button:has(.copy-icon):hover, button:has(.copy-icon):focus-visible {\n            .left {\n              d: path(\"M 2.75 0.5 C 1.7835 0.5 1 1.2835 1 2.25 V 9.75 C 1 10.7165 1.7835 11.5 2.75 11.5 H 3.75 H 6.5 V 10 H 3.75 H 2.75 C 2.6119 10 2.5 9.8881 2.5 9.75 V 2.25 C 2.5 2.1119 2.6119 2 2.75 2 H 8.25 C 8.3881 2 8.5 2.1119 8.5 2.25 V 5 H 10 V 2.25 C 10 1.2835 9.2165 0.5 8.25 0.5 H 2.75 Z\");\n              transform: translate(-1px, -1px);\n            }\n            .right {\n              transform: translate(1px, 1px);\n            }\n          }"
+    },
+    "timestamp": 1735848563947
+  },
+  "240f126341e6dfbb28aceed0bc8f0356c75c21357767cd3eecb118727f463b98": {
+    "data": {
+      "progress": "Filename and code have been successfully extracted from the first chunk.",
+      "completed": false
+    },
+    "timestamp": 1735848565248
+  },
+  "d61f296983413fce7a307b2ff56f02179bde7ba48f2b6989198e3574a15e1fcb": {
+    "data": {
+      "id": "chatcmpl-AlLnZuhehuGLIwdByiJHi29z0yTZi",
+      "object": "chat.completion",
+      "created": 1735848573,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_Csu0jFUfQAWiE44CEJ87MDiu",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":108,\"args\":[],\"step\":\"Clicked on the button labeled 'Code' to switch to the 'Code' tab.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 9766,
+        "completion_tokens": 45,
+        "total_tokens": 9811,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848574974,
+    "requestId": "nce3uprvgni"
+  },
+  "d842a4ef7c321cbd4ca52b0dcc86d6926a64898dbcbf27310dd53843c5a9f6a0": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848586256,
+    "requestId": "nce3uprvgni"
+  },
+  "b39b38ecf5fbd53648a7480e6147bc36accc1b47518ccbd420e9fd69f68c2fa8": {
+    "data": {
+      "filename": "page.tsx",
+      "code": ".copy-icon {\n            * {\n              transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95), d 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);\n            }\n          }\n          button:has(.copy-icon):hover, button:has(.copy-icon):focus-visible {\n            .left {\n              d: path(\"M 2.75 0.5 C 1.7835 0.5 1 1.2835 1 2.25 V 9.75 C 1 10.7165 1.7835 11.5 2.75 11.5 H 3.75 H 6.5 V 10 H 3.75 H 2.75 C 2.6119 10 2.5 9.8881 2.5 9.75 V 2.25 C 2.5 2.1119 2.6119 2 2.75 2 H 8.25 C 8.3881 2 8.5 2.1119 8.5 2.25 V 5 H 10 V 2.25 C 10 1.2835 9.2165 0.5 8.25 0.5 H 2.75 Z\");\n              transform: translate(-1px, -1px);\n            }\n            .right {\n              transform: translate(1px, 1px);\n            }\n          }"
+    },
+    "timestamp": 1735848598493,
+    "requestId": "f4cqils56oa"
+  },
+  "3ca5221f660d3d54a9b000b6aa8764dff462ddc670106dfd411c8f5437b55c77": {
+    "data": {
+      "filename": "page.tsx",
+      "code": ".copy-icon {\n            * {\n              transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95), d 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);\n            }\n          }\n          button:has(.copy-icon):hover, button:has(.copy-icon):focus-visible {\n            .left {\n              d: path(\"M 2.75 0.5 C 1.7835 0.5 1 1.2835 1 2.25 V 9.75 C 1 10.7165 1.7835 11.5 2.75 11.5 H 3.75 H 6.5 V 10 H 3.75 H 2.75 C 2.6119 10 2.5 9.8881 2.5 9.75 V 2.25 C 2.5 2.1119 2 2.75 2 H 8.25 C 8.3881 2 8.5 2.1119 8.5 2.25 V 5 H 10 V 2.25 C 10 1.2835 9.2165 0.5 8.25 0.5 H 2.75 Z\");\n              transform: translate(-1px, -1px);\n            }\n            .right {\n              transform: translate(1px, 1px);\n            }\n          }"
+    },
+    "timestamp": 1735848607011,
+    "requestId": "f4cqils56oa"
+  },
+  "b87a1a9e09345d062e931ac692bcb301c32bb9ad09a827012cd40a4b6061f0f1": {
+    "data": {
+      "progress": "The filename 'page.tsx' and a portion of the code have been extracted.",
+      "completed": false
+    },
+    "timestamp": 1735848610788,
+    "requestId": "f4cqils56oa"
+  },
+  "e127bf691381e0a0e40efea2ac6ec22b56ccf5f8310c32af35c0776fd755f634": {
+    "data": {
+      "filename": "page.tsx",
+      "code": ".copy-icon {\n            * {\n              transition: transform 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95), d 0.35s cubic-bezier(0.35, 0.2, 0.14, 0.95);\n            }\n          }\n          button:has(.copy-icon):hover, button:has(.copy-icon):focus-visible {\n            .left {\n              d: path(\"M 2.75 0.5 C 1.7835 0.5 1 1.2835 1 2.25 V 9.75 C 1 10.7165 1.7835 11.5 2.75 11.5 H 3.75 H 6.5 V 10 H 3.75 H 2.75 C 2.6119 10 2.5 9.8881 2.5 9.75 V 2.25 C 2.5 2.1119 2.6119 2 2.75 2 H 8.25 C 8.3881 2 8.5 2.1119 8.5 2.25 V 5 H 10 V 2.25 C 10 1.2835 9.2165 0.5 8.25 0.5 H 2.75 Z\");\n              transform: translate(-1px, -1px);\n            }\n            .right {\n              transform: translate(1px, 1px);\n            }\n          }"
+    },
+    "timestamp": 1735848618015
+  },
+  "4228dbd8dad8a4ebdabd194a9b48b8a886cf634e0f2811ee64f5ef5202b173f4": {
+    "data": {
+      "progress": "Filename and code have been extracted from the first chunk.",
+      "completed": false
+    },
+    "timestamp": 1735848619111
+  },
+  "7d200b39094c0dc8c90725195d74cb53393c176945d1ccd593dedb87457592f5": {
+    "data": {
+      "id": "chatcmpl-AlLoKaKWVm1WoWZehe61026DSRjbh",
+      "object": "chat.completion",
+      "created": 1735848620,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_Lpg825aKhjbXkwUKCOql3KsY",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":90,\"args\":[],\"step\":\"Clicked the button labeled 'Console' to switch to the 'Console' tab.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 8195,
+        "completion_tokens": 44,
+        "total_tokens": 8239,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848621317,
+    "requestId": "lsjlej0cwog"
+  },
+  "71f187ed24a85fbb9c46b21af3acfb910696373cc7ee755a60eb75edf3b93bed": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848632429,
+    "requestId": "lsjlej0cwog"
+  },
+  "cf5e58f62aa005deb4b8ec8531e49142230b05f4d2b060e508eaba5e4004a9d2": {
+    "data": {
+      "filename": "Generated app/page.tsx",
+      "code": "Error: The file \"/app/pricing-calculator\" cannot be found (imported in \"/app/page\"). Make sure the file or alias exists in the correct location."
+    },
+    "timestamp": 1735848636818,
+    "requestId": "0q8dhrs1i6t"
+  },
+  "0b8c8957d07bb9e87a5778b808430fa96fab398f040138c19109456d98d6be61": {
+    "data": {
+      "filename": "Generated app/page.tsx",
+      "code": "Error: The file \"/app/pricing-calculator\" cannot be found (imported in \"/app/page\"). Make sure the file or alias exists in the correct location."
+    },
+    "timestamp": 1735848638047,
+    "requestId": "0q8dhrs1i6t"
+  },
+  "3c07bfad19019cc77a4ff668e05a6166a2f4abdd909964f92e28eefb295e55a3": {
+    "data": {
+      "progress": "Filename and code have been extracted from the current file.",
+      "completed": true
+    },
+    "timestamp": 1735848638839,
+    "requestId": "0q8dhrs1i6t"
+  },
+  "b3904cb1dc6426d2f217c90775281d614028b7bb83e6e5509dd6ae87d3836aa2": {
+    "data": {
+      "id": "chatcmpl-AlLopfLNmQpgfDRDRoyu9Kx3VLNrv",
+      "object": "chat.completion",
+      "created": 1735848651,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_4AToRyePKp51dOlHErEGEmjq",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":87,\"args\":[],\"step\":\"Clicked on the 'Preview' tab button.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7784,
+        "completion_tokens": 37,
+        "total_tokens": 7821,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735848653083,
+    "requestId": "w9lx7x1lbi"
+  },
+  "1e99068b8202ebc4ddb60b949ac7415e2f0aa744020cc09d75b1d7fda688e36c": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735848663663,
+    "requestId": "w9lx7x1lbi"
+  },
+  "66e4d34a751359971001fb83621fb3ad2219535abc2afc6ee23cd1f2cb5c3627": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to access chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 10,
+          "description": "Label to attach files."
+        },
+        {
+          "elementId": 11,
+          "description": "Label to import from Figma."
+        },
+        {
+          "elementId": 12,
+          "description": "Button to select a project."
+        },
+        {
+          "elementId": 14,
+          "description": "Button to generate a sticky header."
+        },
+        {
+          "elementId": 17,
+          "description": "Button to structure LLM output."
+        },
+        {
+          "elementId": 20,
+          "description": "Button to implement a min heap."
+        },
+        {
+          "elementId": 24,
+          "description": "Button to request a template."
+        }
+      ]
+    },
+    "timestamp": 1735851178509,
+    "requestId": "s0ze85j3h1"
+  },
+  "8d77e5cf9694da188fd619c86fde7efc20b3e185821a99eee278f634d18aba6c": {
+    "data": {
+      "id": "chatcmpl-AlMV7034Noxg6Vcbm6U4gbyslB3Qr",
+      "object": "chat.completion",
+      "created": 1735851273,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_3yJyKYTLVuVL8XtZKfOVxElG",
+                "type": "function",
+                "function": {
+                  "name": "skipSection",
+                  "arguments": "{\"reason\":\"None of the elements appear to be a 'Generate' button or related to generating content.\"}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5031,
+        "completion_tokens": 32,
+        "total_tokens": 5063,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851274215,
+    "requestId": "yr786tfnpc"
+  },
+  "3ce6cb945db4c958767bc130486c1dcb874fa214731c1664cdfc2021a42524dc": {
+    "data": {
+      "id": "chatcmpl-AlMV8QF1J0vHgNvlQZwy1FC8aLzBE",
+      "object": "chat.completion",
+      "created": 1735851274,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_DWlKfgExuTBmCSqigSyehdYW",
+                "type": "function",
+                "function": {
+                  "name": "skipSection",
+                  "arguments": "{\"reason\":\"The current section does not contain a 'Generate' button to click.\"}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5040,
+        "completion_tokens": 28,
+        "total_tokens": 5068,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851275346,
+    "requestId": "yr786tfnpc"
+  },
+  "68f6ab6f7c0a498766e320e61842c4adde68aef85cafb576c9e5f4b6e72d1ec7": {
+    "data": {
+      "id": "chatcmpl-AlMVJFRH7XwA5gEcJLNuvTMtZdmOw",
+      "object": "chat.completion",
+      "created": 1735851285,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_FFXlXf4ZTe2H2K5rfaJbq6l0",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":20,\"args\":[],\"step\":\"Clicked the 'Generate a sticky header' button.\",\"why\":\"This button is labeled with 'Generate', which matches the user's goal to click the 'Generate' button.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 6221,
+        "completion_tokens": 61,
+        "total_tokens": 6282,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851286459,
+    "requestId": "yr786tfnpc"
+  },
+  "aea7b730ef66027ae8e20622e211a26b06e3a53a2306e430098654933686857c": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851290786,
+    "requestId": "yr786tfnpc"
+  },
+  "bd24f46e30a05d3114c8e74ff5082d1ad6c13274d895f7e372492dacc76bb0ed": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to access chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button to view a sticky header example."
+        },
+        {
+          "elementId": 49,
+          "description": "Button to access more options."
+        },
+        {
+          "elementId": 58,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 60,
+          "description": "Button to close a modal or section."
+        }
+      ]
+    },
+    "timestamp": 1735851293773,
+    "requestId": "s8cezx84r"
+  },
+  "4c135f58b7bf4705bb08040da827c8484215ee5b113f2f1f01376934a07a3068": {
+    "data": {
+      "hasCode": true
+    },
+    "timestamp": 1735851295419,
+    "requestId": "v0wp53w06p"
+  },
+  "4b7568b3ebfe73e565e4b2113e4e8fac27079754eeba512821c5a41458167baf": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for additional actions."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button labeled 'Sticky Header Example'."
+        },
+        {
+          "elementId": 66,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 68,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 70,
+          "description": "Button to stop the current generation process."
+        },
+        {
+          "elementId": 74,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 77,
+          "description": "Button to switch to the 'Code' tab."
+        },
+        {
+          "elementId": 80,
+          "description": "Button to switch to the 'Console' tab."
+        },
+        {
+          "elementId": 85,
+          "description": "Button to expand the 'app' section."
+        },
+        {
+          "elementId": 88,
+          "description": "Button to expand the 'components' section."
+        },
+        {
+          "elementId": 91,
+          "description": "Button to view 'Header.tsx' file."
+        },
+        {
+          "elementId": 94,
+          "description": "Button to view 'page.tsx' file."
+        },
+        {
+          "elementId": 103,
+          "description": "Button with a copy icon, likely for copying content."
+        },
+        {
+          "elementId": 104,
+          "description": "Button with a download icon, likely for downloading content."
+        },
+        {
+          "elementId": 106,
+          "description": "Button with no visible label, possibly for additional actions."
+        }
+      ]
+    },
+    "timestamp": 1735851303178,
+    "requestId": "pgysl586n8b"
+  },
+  "9f8da6f07d6da0705719f7c9830970c90a3dcd7fff64993d219f1810326ff72f": {
+    "data": {
+      "id": "chatcmpl-AlMVbWQrTVxPRptl79pEQ42Mb2kUQ",
+      "object": "chat.completion",
+      "created": 1735851303,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_vsFHUTVKER0Y6ilLQI9GqJfa",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":80,\"args\":[],\"step\":\"Clicked on the button labeled 'Code' to switch to the Code tab.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7306,
+        "completion_tokens": 43,
+        "total_tokens": 7349,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851304998,
+    "requestId": "7h89obcbw1"
+  },
+  "3fa2188df65c95a9417ed4bfe064a784c3c4e9f0257c25b5c968c49a7b76b959": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851309982,
+    "requestId": "7h89obcbw1"
+  },
+  "3e3d12acdf22172d35e9ac105cc7514196f1b0f351da0bd450921381e8a0258f": {
+    "data": {
+      "code": "Generated app/page.tsx\nGenerated app/components/Header.tsx\nGenerated app/components/Content.tsx\nGenerated app/layout.tsx"
+    },
+    "timestamp": 1735851311690,
+    "requestId": "x1wn1kr6qde"
+  },
+  "1e837dade87018ad5bfa0e27573205147af4d9a765d521014b51532c60fe9d17": {
+    "data": {
+      "code": "Generated app/page.tsx\nGenerated app/components/Header.tsx\nGenerated app/components/Content.tsx\nGenerated app/layout.tsx"
+    },
+    "timestamp": 1735851314804,
+    "requestId": "x1wn1kr6qde"
+  },
+  "ba61b30680faee65d0bcd4b9ffd58a8546bbf038fdbc7322860c6a4f8ceae138": {
+    "data": {
+      "progress": "The extraction response includes code from four files: app/page.tsx, app/components/Header.tsx, app/components/Content.tsx, and app/layout.tsx.",
+      "completed": false
+    },
+    "timestamp": 1735851318933,
+    "requestId": "x1wn1kr6qde"
+  },
+  "b4991226ba6ecd45449730a85f41a344e7549db976188b7e2e4d4ca5320606f2": {
+    "data": {
+      "code": "```tsx\n// Generated app/page.tsx\n\n// Generated app/components/Header.tsx\n\n// Generated app/components/Content.tsx\n\n// Generated app/layout.tsx\n```\n\n```tsx\n// The Header component uses the useEffect hook to add a scroll event listener.\n```"
+    },
+    "timestamp": 1735851327190
+  },
+  "970e5fc8db5a463f3b3e5b491096c4f9650cf434d6e487687b4fb07a050e1dea": {
+    "data": {
+      "code": "Generated app/page.tsx\nGenerated app/components/Header.tsx\nGenerated app/components/Content.tsx\nGenerated app/layout.tsx\n\n// The Header component uses the useEffect hook to add a scroll event listener."
+    },
+    "timestamp": 1735851328432
+  },
+  "4740c46d6cdf88e348a67e0564b7d6d0aea4514187bd87530870bafae4055cba": {
+    "data": {
+      "progress": "Extracted code includes four files: app/page.tsx, app/components/Header.tsx, app/components/Content.tsx, and app/layout.tsx. Additional information about the Header component's use of the useEffect hook is also provided.",
+      "completed": false
+    },
+    "timestamp": 1735851330475
+  },
+  "d0f08d4f233ed93288dca4637fd2751378a94e049f68b1cd635f3d6094bf1fde": {
+    "data": {
+      "id": "chatcmpl-AlMWE3fUuNNTQugtwjxGIgP3IWl65",
+      "object": "chat.completion",
+      "created": 1735851342,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_PWDml0GOJLR5DbZ2FotjHUfR",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":92,\"args\":[],\"step\":\"Clicked on the 'Preview' tab button.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7161,
+        "completion_tokens": 37,
+        "total_tokens": 7198,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851343038,
+    "requestId": "5cvchiemiuv"
+  },
+  "8a51c183b392671d56a34036d3082b7637b16ee5eff91ddb78d30d7667d61f6f": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851353486,
+    "requestId": "5cvchiemiuv"
+  },
+  "67d2beff49028cb15e64265c79bf557b34a18deba90ff038ba9017bb4a598568": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for a hidden action."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 12,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 14,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 16,
+          "description": "Label to attach files."
+        },
+        {
+          "elementId": 17,
+          "description": "Label to import from Figma."
+        },
+        {
+          "elementId": 18,
+          "description": "Button to select a project."
+        },
+        {
+          "elementId": 20,
+          "description": "Button to generate a sticky header."
+        },
+        {
+          "elementId": 23,
+          "description": "Button to explain cron jobs."
+        },
+        {
+          "elementId": 26,
+          "description": "Button to flatten nested arrays."
+        },
+        {
+          "elementId": 30,
+          "description": "Button to request a template."
+        }
+      ]
+    },
+    "timestamp": 1735851711775,
+    "requestId": "mw4cnthvz98"
+  },
+  "82e1a9e8041f9cc050f68855030ebece4faae8ad833842fa0c893237b19078fe": {
+    "data": {
+      "id": "chatcmpl-AlMcCh13jlalH4R0DP8TtzAh3g7bd",
+      "object": "chat.completion",
+      "created": 1735851712,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_gS0aiS4TTvpoTfBMKBMz7H3l",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"fill\",\"element\":15,\"args\":[\"<|PROMPT|>\"],\"step\":\"Entered the prompt into the textarea with id 'chat-main-textarea'.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5035,
+        "completion_tokens": 50,
+        "total_tokens": 5085,
+        "prompt_tokens_details": {
+          "cached_tokens": 1920,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851713396,
+    "requestId": "yrobvqpfd8"
+  },
+  "5a1597061c9299825af22202df6b16923f7fcaf7a841a31ce5881773c6cc9e74": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851718939,
+    "requestId": "yrobvqpfd8"
+  },
+  "9d4a836c7f3fccd7754f1648949e8caf9da6f782a09e9a90e96691031d432449": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851724357,
+    "requestId": "ipvpjurhgab"
+  },
+  "7e700c02715aef0f95a504d31e64acdc362a449ec2bbd1e657f87b18180f470d": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to access chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for a hidden action."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button for a sticky header demo."
+        },
+        {
+          "elementId": 43,
+          "description": "Button for more options."
+        },
+        {
+          "elementId": 52,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 54,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 56,
+          "description": "Button to stop the generation process."
+        }
+      ]
+    },
+    "timestamp": 1735851732655,
+    "requestId": "e9g40n89ljn"
+  },
+  "d9d5e0d1399be2b26423059db02558cdf62594783363313147b490272c1f5742": {
+    "data": {
+      "hasCode": true
+    },
+    "timestamp": 1735851734024,
+    "requestId": "uk27bgkq5s"
+  },
+  "cc2473c096c12ea644a766017ff0029e8ff8f8a7e4b0c31abfa96b00da9a6b30": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button to demonstrate sticky header functionality."
+        },
+        {
+          "elementId": 43,
+          "description": "Button to access more options."
+        },
+        {
+          "elementId": 56,
+          "description": "Button to view generated app/page.tsx."
+        },
+        {
+          "elementId": 59,
+          "description": "Button to view generating app/components/header.tsx."
+        },
+        {
+          "elementId": 64,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 68,
+          "description": "Button to stop the generation process."
+        },
+        {
+          "elementId": 72,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 75,
+          "description": "Button to view code tab."
+        },
+        {
+          "elementId": 78,
+          "description": "Button to view console tab."
+        },
+        {
+          "elementId": 83,
+          "description": "Button to expand the app section."
+        },
+        {
+          "elementId": 86,
+          "description": "Button to expand the components section."
+        },
+        {
+          "elementId": 89,
+          "description": "Button to view header.tsx file."
+        },
+        {
+          "elementId": 92,
+          "description": "Button to view page.tsx file."
+        },
+        {
+          "elementId": 101,
+          "description": "Button to copy content."
+        },
+        {
+          "elementId": 102,
+          "description": "Button to download content."
+        }
+      ]
+    },
+    "timestamp": 1735851748485,
+    "requestId": "ntaqmjp9n3g"
+  },
+  "eb407b859aeb6969837ea61e29c4fd0c040082fc3c40f5dce00f00baa5c95fad": {
+    "data": {
+      "id": "chatcmpl-AlMcnf9YGdw12DG4tzMUAIYDlRNz6",
+      "object": "chat.completion",
+      "created": 1735851749,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_CKsix3jXaovifmBYSQFVG1XF",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"click\",\"element\":78,\"args\":[],\"step\":\"Clicked on the tab labeled 'Code'.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 7388,
+        "completion_tokens": 37,
+        "total_tokens": 7425,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851750612,
+    "requestId": "kyssbknhp48"
+  },
+  "21a329447b927b31e7c9bd59d5679a8d49f4279baa40b0714726db473ee2bc0d": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851756360,
+    "requestId": "kyssbknhp48"
+  },
+  "5e2718df1cba76fdc536a85e42680e2aabd174b9b367a74b3136159559ca11cc": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for a hidden action."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 12,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 14,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 16,
+          "description": "Label to attach files."
+        },
+        {
+          "elementId": 17,
+          "description": "Label to import from Figma."
+        },
+        {
+          "elementId": 18,
+          "description": "Button to select a project."
+        },
+        {
+          "elementId": 20,
+          "description": "Button to generate a sticky header."
+        },
+        {
+          "elementId": 23,
+          "description": "Button to structure LLM output."
+        },
+        {
+          "elementId": 26,
+          "description": "Button to implement a min heap."
+        },
+        {
+          "elementId": 30,
+          "description": "Button to request a template."
+        }
+      ]
+    },
+    "timestamp": 1735851819479,
+    "requestId": "4kphh8752rh"
+  },
+  "95ee014f7127142c1b5251cfe31ee0bd57e2d9a43738b3f42c9bf39d252d3fcb": {
+    "data": {
+      "completed": false
+    },
+    "timestamp": 1735851824422,
+    "requestId": "3b85zmkkx6"
+  },
+  "f624b83cdb87aa9133ff0b3328a5c492ee4b484efc477f06265d53776d6a9667": {
+    "data": {
+      "id": "chatcmpl-AlMe0CjjKUYlq9zR760MzcIV6ODNh",
+      "object": "chat.completion",
+      "created": 1735851824,
+      "model": "gpt-4o-2024-08-06",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": null,
+            "tool_calls": [
+              {
+                "id": "call_hY3sAlhYG58HetisUlda00bQ",
+                "type": "function",
+                "function": {
+                  "name": "doAction",
+                  "arguments": "{\"method\":\"fill\",\"element\":15,\"args\":[\"<|PROMPT|>\"],\"step\":\"Entered the prompt into the textarea with id 'chat-main-textarea'.\",\"completed\":true}"
+                }
+              }
+            ],
+            "refusal": null
+          },
+          "logprobs": null,
+          "finish_reason": "tool_calls"
+        }
+      ],
+      "usage": {
+        "prompt_tokens": 5360,
+        "completion_tokens": 50,
+        "total_tokens": 5410,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "system_fingerprint": "fp_5f20662549"
+    },
+    "timestamp": 1735851825872,
+    "requestId": "3b85zmkkx6"
+  },
+  "a521c627a65813809d1d7ca30555d54593e3a9c57385b97febddc931601f4d3c": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851830298,
+    "requestId": "3b85zmkkx6"
+  },
+  "0b4784f3b3a68fcc482a9ec76b8350f9a1ceac7dda6764c82106cbf05d4915ed": {
+    "data": {
+      "completed": true
+    },
+    "timestamp": 1735851840417,
+    "requestId": "ucxdk8imtd"
+  },
+  "38b3f2f5497d58d8bfdd9dcc664f3f9f99ed3f413af61c1cc41fb7374c671c54": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to view chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to view projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button to view a sticky header example."
+        },
+        {
+          "elementId": 66,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 68,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 70,
+          "description": "Button to stop the current generation process."
+        },
+        {
+          "elementId": 74,
+          "description": "Button to close a modal or section."
+        },
+        {
+          "elementId": 77,
+          "description": "Button to view the code tab."
+        },
+        {
+          "elementId": 80,
+          "description": "Button to view the console tab."
+        },
+        {
+          "elementId": 85,
+          "description": "Button to expand or collapse the 'app' section."
+        },
+        {
+          "elementId": 88,
+          "description": "Button to expand or collapse the 'components' section."
+        },
+        {
+          "elementId": 91,
+          "description": "Button to expand or collapse the 'Header.tsx' file."
+        },
+        {
+          "elementId": 94,
+          "description": "Button to expand or collapse the 'page.tsx' file."
+        },
+        {
+          "elementId": 103,
+          "description": "Button with a copy icon, likely to copy content."
+        },
+        {
+          "elementId": 104,
+          "description": "Button with a download icon, likely to download content."
+        }
+      ]
+    },
+    "timestamp": 1735851857789,
+    "requestId": "ccoceycnlt"
+  },
+  "b09b6a51e5ae22617af7d44540cf3691f49c9f13b2845c8a6804d9b2b1f5473c": {
+    "data": {
+      "elements": [
+        {
+          "elementId": 0,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 1,
+          "description": "Link to start a new chat."
+        },
+        {
+          "elementId": 2,
+          "description": "Link to access chat history."
+        },
+        {
+          "elementId": 3,
+          "description": "Link to access projects."
+        },
+        {
+          "elementId": 4,
+          "description": "Button to provide feedback."
+        },
+        {
+          "elementId": 5,
+          "description": "Button with no visible label, possibly for an action."
+        },
+        {
+          "elementId": 6,
+          "description": "Button to toggle the user profile menu."
+        },
+        {
+          "elementId": 7,
+          "description": "Button to toggle the sidebar."
+        },
+        {
+          "elementId": 8,
+          "description": "Button for a sticky header example."
+        },
+        {
+          "elementId": 49,
+          "description": "Button for more options."
+        },
+        {
+          "elementId": 95,
+          "description": "Button to upgrade the plan."
+        },
+        {
+          "elementId": 97,
+          "description": "Button to close something."
+        },
+        {
+          "elementId": 98,
+          "description": "Button with no visible label, possibly for an action."
+        },
+        {
+          "elementId": 100,
+          "description": "Button to stop generation."
+        },
+        {
+          "elementId": 104,
+          "description": "Button to close something."
+        },
+        {
+          "elementId": 105,
+          "description": "Button to preview."
+        },
+        {
+          "elementId": 108,
+          "description": "Button to view code."
+        },
+        {
+          "elementId": 111,
+          "description": "Button to view console."
+        },
+        {
+          "elementId": 116,
+          "description": "Button for selecting an option."
+        },
+        {
+          "elementId": 117,
+          "description": "Button to open a new tab."
+        },
+        {
+          "elementId": 118,
+          "description": "Button to toggle fullscreen mode."
+        }
+      ]
+    },
+    "timestamp": 1735851875506,
+    "requestId": "o7pts7y1iha"
+  }
+}
