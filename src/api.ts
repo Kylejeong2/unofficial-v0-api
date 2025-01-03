@@ -100,14 +100,14 @@ async function checkAndLogin(page: any) {
   return false;
 }
 
-async function captureScreenshot(page: any, name: string) {
-  const screenshot = await page.screenshot({
-    type: 'png',
-    fullPage: true
-  });
-  const base64Image = screenshot.toString('base64');
-  return base64Image;
-}
+// async function captureScreenshot(page: any, name: string) {
+//   const screenshot = await page.screenshot({
+//     type: 'png',
+//     fullPage: true
+//   });
+//   const base64Image = screenshot.toString('base64');
+//   return base64Image;
+// }
 
 async function waitForGeneration(page: any) {
   const startTime = Date.now();
@@ -139,79 +139,63 @@ async function waitForGeneration(page: any) {
       return true;
     }
 
-    // Check if still generating
-    const isGenerating = actions.some(action => {
-      const desc = action.description.toLowerCase();
-      return (
-        desc.includes('generating') ||
-        desc.includes('loading') ||
-        desc.includes('please wait')
-      );
-    });
-
-    if (!isGenerating) {
-      // Additional verification - try to extract code
-      try {
-        const result = await page.extract({
-          instruction: "check if there's any code visible in the editor",
-          schema: z.object({
-            hasCode: z.boolean()
-          })
-        });
-        if (result.hasCode) {
-          return true;
-        }
-      } catch (e) {
-        // If extraction fails, continue waiting
-      }
-    }
-
-    // Wait before next check
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Wait 5 seconds before next check
+    await new Promise(resolve => setTimeout(resolve, 5000));
   }
 
   throw new Error('Generation timed out');
 }
 
 async function extractCode(page: any) {
-  // First check if code tab exists
-  const actions = await page.observe() as ObserveAction[];
-  const hasCodeTab = actions.some(action => 
-    action.description.toLowerCase().includes('code') && 
-    (action.selector?.includes('@[17rem]/tabs:block') || 
-     action.selector?.includes('span') ||
-     action.description.toLowerCase().includes('tab'))
-  );
+  let attempts = 0;
+  const maxAttempts = 5;
+  
+  while (attempts < maxAttempts) {
+    try {
+      // First click the Code tab in the top navigation
+      await page.act({ 
+        action: "click the Code tab" 
+      });
+      
+      // Wait for code tab to be active
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Get all available actions
+      const actions = await page.observe() as ObserveAction[];
+      
+      // Get the current filename from the active tab
+      const fileTab = actions.find(action => 
+        action.description.toLowerCase().includes('tab') && 
+        action.description.toLowerCase().includes('.') &&
+        !action.description.toLowerCase().includes('click')
+      );
+      
+      const filename = fileTab ? fileTab.description.trim() : 'code.tsx';
 
-  if (!hasCodeTab) {
-    throw new Error('No code tab found - generation may have failed');
-  }
+      // Click the copy button
+      await page.act({
+        action: "click the copy button"
+      });
 
-  // Click the code tab
-  await page.act({ action: "click the tab that says Code" });
+      // Get clipboard content
+      const clipboardContent = await page.evaluate(() => navigator.clipboard.readText());
 
-  // Wait a moment for code view to load
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  // Extract the code by evaluating the page content
-  const result = await page.evaluate(() => {
-    // Look for pre elements containing code
-    const codeBlocks = Array.from(document.querySelectorAll('pre'));
-    return codeBlocks.map(block => ({
-      filename: block.getAttribute('data-filename') || '',
-      code: block.textContent || ''
-    }));
-  });
-
-  // Format the result
-  const files: Record<string, string> = {};
-  for (const block of result) {
-    if (block.code.trim()) {
-      files[block.filename || 'code.tsx'] = block.code;
+      // Verify we got some code
+      if (clipboardContent && clipboardContent.trim().length > 0) {
+        return {
+          [filename]: clipboardContent
+        };
+      }
+    } catch (error) {
+      console.log('Copy attempt failed:', error);
     }
+
+    // If no code found or copy failed, wait and try again
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    attempts++;
   }
 
-  return files;
+  throw new Error('Failed to copy code after multiple attempts');
 }
 
 async function interactWithV0(prompt: string) {
@@ -241,15 +225,11 @@ async function interactWithV0(prompt: string) {
       }
     });
 
-    await page.act({ 
-      action: "click the Generate button" 
-    });
+    // Press Enter instead of clicking button
+    await page.keyboard.press('Enter');
 
     // Wait for generation to complete using observe
     await waitForGeneration(page);
-
-    // Capture IDE screenshot
-    // const ideScreenshot = await captureScreenshot(page, 'ide');
 
     // Extract code
     const files = await extractCode(page);
@@ -258,8 +238,7 @@ async function interactWithV0(prompt: string) {
     await saveCookies(page);
 
     return {
-      files,
-      // ideScreenshot
+      files
     };
 
   } finally {
